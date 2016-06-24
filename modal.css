@@ -1,0 +1,47 @@
+			body,html{
+				padding:0;
+				margin:0;
+			}
+			.m-modal{
+				height:100%;
+				width:100%;
+				position:fixed;
+				left:0;
+				top:0;
+				background-color:rgba(0,0,0,0.8);
+				text-align:center;
+				color:#aaa;
+			}
+			.m-modal .modal_align,.m-modal .modal_wrap{
+				display:inline-block;
+				vertical-align:baseline;
+				zoom:1;
+				*display:inline;
+				*vertical-align:auto;
+				vertical-align:middle;
+			}
+			.m-modal .modal_align{
+				height:100%;
+				width:1px;
+				line-height:100%;
+			}
+			.m-modal .modal_wrap{
+				position:relative;
+				text-align:left;
+				width:410px;
+				height:320px;
+				-webkit-box-shadow:2px 2px 5px rgba(0,0,0,0.4);
+				box-shadow:2px 2px 5px rgba(0,0,0,0.4);
+				border-radius:3px;
+				overflow:hidden;
+				color: black;
+				background-color: white;
+			}
+			.modal_wrap input{width: 293px;height: 45px;font-size: 31px}
+			.modal_wrap button{width: 293px;line-height: 45px;background-color: rgb(26,163,57);color: white;font-size: 17px;}
+			.bk{height: 31px; background: url(images/spirit2.png) no-repeat 390px 8px;}
+			.modal_body{margin-left: 40px;margin-top: 10px;}
+			.modal_body h3{font-size: 25px;}
+			.form1,.form2{color: rgb(204,204,204);}
+			.form1{margin-bottom: 16px;}
+			.form2{margin-bottom: 29px;}

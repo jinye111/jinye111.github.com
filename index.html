@@ -1,0 +1,277 @@
+<html>
+	<head>
+		<title>大作业</title>
+		<meta charset="UTF-8">
+		 <link rel="stylesheet" href="modal.css">
+		<style type="text/css">
+			html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+			a,button{cursor:pointer;text-decoration: none;}
+			a,a:hover{color:#333;}
+			.g-hd .m-top{ width: 100%; height: 36px; background: #f3f3f3 }
+			.g-hd .m-top .wrap{margin-left: 12%;background: url(images/spirit.png) no-repeat 965px 8px;}
+			.g-hd .m-top p{ display: inline-block; line-height: 36px;font-size: 12px;cursor:pointer;}
+			.g-hd .m-top a{ color: #21a557;font-size: 12px;text-decoration: none;}
+			.g-hd .m-top .alerts{ height:12px; margin-left:41%; line-height:12px; text-indent: 15px;font-size: 12px;}
+			.g-hd .cancel{ display:none;font:12px/12px SimSun; color:#999; padding:0 6px; border-left:1px solid #cccccc;}
+			.cancel:hover{ color:#21a557; text-decoration:underline;}
+			.act{background-color: #fff;}
+
+			.g-hd .m-bot{height: 22px; padding:32px 0 36px 0; }
+			.g-hd .m-bot .m-logo{ width:260px;}
+			.g-hd .m-logo h2{ width:176px; height:26px; line-height:26px; padding-left:162px;float: left;background: url(images/spirit.png) no-repeat 70px -24px;}
+			.g-hd .login{float: left;margin-left:30px;}
+			.attention{width:54px; height:21px; padding-left:22px; border:0; border-radius:2px; background:#21a557 url(images/spirit.png) no-repeat 0px -74px; color:#fff;}
+			.attention:hover{background:#2fb556;}
+			.link{float:right;}
+			.link a{float:left; margin-right:56px; font-size:16px; color:#666;}
+			.link a:hover{ color:#21a557;}
+			.link .search{width:18px; height:18px; background: url(images/spirit.png) no-repeat 0px -55px}
+			.slide{position: relative;height: 462px;}
+			.pointer{position: absolute;margin-left:45%;bottom: 20px;}
+			.pointer .current{background: black;}
+			.pointer i{border-radius: 10px;width: 10px;height: 10px;display: inline-block;background-color: white;margin-right: 5px}
+			.m-product{height: 297px;margin-left: 5%;}
+			.team1,.team2,.team3{margin-right: 5%;float: left;width:341px;height: 297px;}
+			.img1,.img2,.img3{float: left;width:81px;height: 81px;margin-top: 67px;margin-bottom: 148px;}
+			.img1{background: url(images/spirit.png) no-repeat 0 -193px}
+			.img2{background: url(images/spirit.png) no-repeat -95px -194px}
+			.img3{background: url(images/spirit.png) no-repeat 0 -104px}
+			.content1,.content2,.content3{width:240px;height:297px;float:right;}
+			.content1 h3,.content2 h3{margin-top: 62px;margin-bottom: 20px;}
+			.content1 p,.content2 p{margin-bottom: 34px;}
+			.content3 h3{margin-top: 57px;margin-bottom: 20px;}
+			.content3 p{margin-bottom: 22px;}
+			.content1 a,.content2 a,.content3 a{color: rgb(136,198,131);}
+			.workplace{width: 1652px;height: 220px;}
+			.workplace img{float: left;margin-right: 4px;}
+			.g-ft{height: 263px;background-color: rgb(44,51,57);}
+			.left,.middle-1,.middle-2,.right{float: left;margin-top: 72px;}
+			.left{margin-left: 255px;}
+			.middle-1{margin-left: 150px;}
+			.middle-1 p{margin-bottom: 12px;}
+			.middle-2{margin-left: 100px;}
+			.middle-2 p{margin-bottom: 12px;}
+			.right{margin-left: 72px;}
+			.right p{margin-bottom: 15px;}
+			.logo{color: rgb(57,160,48);font-size:22px;padding-left: 74px;margin-bottom: 29px;background: url(images/spirit.png) no-repeat 0px -24px;}
+			.m-ft{color: rgb(139,143,146)}
+			.left p{font:12.5px/25px 'Microsoft YaHei';}
+			.m-ft a{display: block;color: rgb(139,143,146);margin-bottom: 16px;}
+			.g-bot{background-color: rgb(248,248,248);height: 1548px;}
+			.m-left,.m-right{float:left;}
+			.m-left{margin-left:80px;width: 970px;}
+			.m-right{width:222px;margin-left: 21px;margin-top:84px;}
+
+			.tab{margin-top: 83px;margin-bottom: 30px;background-color: rgb(255,255,255);width:400px;height: 50px;font:20px/50px 'Microsoft YaHei'; color:#666;}
+			.button1,.button2{line-height: 50px;float: left;width: 200px;cursor:pointer;text-align: center; }
+			.active{background:#39a030; color:#fff;}
+			.m-content{height: 1185px;}
+			.m-content img{cursor:pointer;}
+
+			.g-bd .m-content{ height:1240px; margin-left:-10px;}
+			.g-bd .m-content .m-team{ position:relative; float:left; width:225px; height:228px; margin:10px; background:#fff; box-shadow:0 1px 1px 1px #e6e6e6; font:12px/12px 'Microsoft YaHei';}
+			.g-bd .m-team img{ width:223px; height:124px; margin:1px 1px 10px 1px;}
+			.g-bd .m-team .coursename{ width:214px; height:12px; color:#333; padding-left:5px;}
+			.g-bd .m-team .provider{ color:#999; padding:10px 5px;}
+			.g-bd .m-team span{ color:#999999; margin-left:5px; padding:0 4px 0 18px; font-size:10px; border:1px solid #dddddd; border-radius:2px; }
+			.g-bd .m-team strong{ display:block; color:#ff3f00; margin:10px 0 20px 5px;}
+			.g-bd .m-team a{ display:none;}
+			.g-bd .m-team:hover a{ display:block; position:absolute; top:-10px; left:-10px; width:461px; min-height:218px; background:#fff; padding:10px; box-shadow:0 0 2px 1px #d3d1d2; z-index:99;}
+			.g-bd .m-team a img{ float:left;}
+			.g-bd .m-team a h3{ font:20px/26px 'Microsoft YaHei'; margin:0 10px 12px 233px; color:#333; }
+			.g-bd .m-team a span{ font:12px/12px 'Microsoft YaHei'; border:none; color:#666; }
+			.g-bd .m-team a .categoryname{ height:40px; font:12px/20px 'Microsoft YaHei'; padding:10px 0 0 233px; color:#666;}
+			.g-bd .m-team a .description{ clear:both; width:426px; padding-left:15px; font:14px/24px 'Microsoft YaHei'; }
+
+
+			.page{margin-left: 628px;}
+			.page a{ float:left; padding:0 6px; margin:0 4px; color:#666666; cursor:pointer;font:14px/20px 'Microsoft YaHei';}
+			.page a:hover{ background:#9dd8b1; color:#fff; }
+			.prve,.next{background-color: #9dd8b1}
+
+			.m-video{height: 230px;background-color: white;box-shadow:0 1px 1px 1px #e6e6e6;}
+			.m-video h4{height: 54px;padding-left: 30px;line-height: 54px;border-bottom:1px solid #dddddd; color:#333; font: normal 16px/55px 'Microsoft YaHei';}
+			.m-title{height:32px; padding:11px 0 0 20px; font:14px/32px 'Microsoft YaHei'; color:#666;}
+			.im1{margin-left: 20px;}
+			.im2{position:relative;top:-78px; left:87px;}
+
+			.g-bd .m-video .popupvideo{ width:100%; height:100%; position:fixed; top:0; left:0; z-index:98;}
+			.g-bd .popupvideo .bgd{ width:100%; height:100%; background:rgba(0,0,0,0.8);}
+			.g-bd .popupvideo .popup{ width:950px; height:676px; background:#fff; position:fixed;left:50%;top:50%; margin:-338px 0 0 -475px; z-index:99;}
+			.g-bd .popup .close{width: 50px;height: 50px;float: right;margin-top:25px;background: url(images/spirit2.png)  no-repeat 10px 10px;}
+			.g-bd .popup p{ height:69px; margin:0 30px; font:bold 18px/69px 'Microsoft YaHei';}
+			.g-bd .popup video{ margin:0 30px;}
+
+			.m-right h3{height:56px; padding-left:20px; margin-top:20px; background:#fff; font: normal 16px/56px 'Microsoft YaHei'; color:#333; border-bottom:1px solid #eeeeee;}
+			.m-list{width:223px; height:720px; background:#fff;position: relative;overflow: hidden;}
+ 			.g-bd .m-list .m-wrap2{ width:223px; height:720px; transition:1s;position:absolute; top: 0px;}
+			.m-wrap2 a{ display:block; height:50px; margin:20px;border: 1px;}
+			.m-wrap2 div{ width:50px; height:50px; overflow:hidden; float:left; margin-right:12px;}
+			.m-wrap2 img{ height:50px; margin-left:-35px;}
+			.m-wrap2 p{ width:121px; height:14px; font:14px/14px 'Microsoft YaHei'; color:#333; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; margin-bottom:13px;}
+			.m-wrap2 span{ font:12px/12px 'Microsoft YaHei'; padding-left:16px; border:none;color:#666;}
+
+		</style>
+		<script src="md5.js"></script>
+	</head>
+	<body>
+		<div class="g-parent" id="parent">
+			<div class="g-hd">
+				<div class="m-top" id="m-top">
+					<div class="wrap" id="j-wrap">
+						<p>网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！<a href="#" target="_black"> 立即查看&gt;</a></p>
+		                <p class="alerts f-fr f-csp">不再提醒</p>
+					</div>
+				</div>
+				<div class="m-bot">
+					<div class="m-logo">
+						<h2 class="f-fwn">网易教育产品部</h2>
+					</div>
+					<div class="login">
+						<input class="attention" id="j-input" type="button" value="关注">
+						<a class="cancel f-dn" id="ocancel">取消</a>
+                		<span class="fans f-fl">粉丝45</span>
+					</div>
+					<div class="link">
+						<a href="http://open.163.com/" target="_blank">网易公开课</a>
+                		<a href="http://study.163.com" target="_blank">云课堂</a>
+                		<a href="http://www.icourse163.org/" target="_blank">中国大学MOOC</a>
+                		<a class="search"></a>
+					</div>
+				</div>
+			</div>
+			<div class="g-bd">
+				<div class="slide" id="slide">
+					<a href="http://open.163.com/"><img src="images/banner1.jpg"></a>
+					<div class="pointer"><i class="current"></i><i></i><i></i></div>   
+				</div>
+				<div class="m-product">
+					<div class="team1">
+						<div class="img1"></div>
+							<div class="content1">
+								<h3>网易公开课</h3>
+                        		<p>推出国内外名校公开课，涉及广泛的学科，名校老师认真讲解深度剖析，网易视频公开课频道搭建起强有力的网络视频教学平台。</p>
+                        		<a href="http://open.163.com/" target="_blank">了解更多 &gt;</a>
+							</div>
+					</div>					
+					<div class="team2">
+						<div class="img2"></div>
+							<div class="content2">
+								<h3>云课堂</h3>
+                        		<p>网易旗下大型在线学习平台，该平台面向学习者提供海量免费、优质课程，创新的个性化学习体验，自由开放的交流互动环境。</p>
+                        		<a href="http://study.163.com" target="_blank">了解更多 &gt;</a>
+							</div>
+						</div>
+					<div class="team3">
+						<div class="img3"></div>
+							<div class="content3">
+								<h3>中国大学MOOC</h3>
+                        		<p>是爱课程网携手云课堂打造的在线学习平台，每一个有提升愿望的人，都可以在这里学习中国最好的大学课程，学完还能获得认证证书。</p>
+                       			<a href="http://www.icourse163.org/" target="_blank">了解更多 &gt;</a>
+							</div>
+					</div>
+				</div>
+				<div class="workplace">
+					<img src="images/workplace1.jpg">
+					<img src="images/workplace2.jpg">
+					<img src="images/workplace3.jpg">
+					<img src="images/workplace4.jpg">
+					<img src="images/workplace5.jpg">
+				</div>
+				<div class="g-bot">
+					<div class="m-left">
+						<div class="tab">
+							<div class="btn button1 active">产品设计</div>
+							<div class="btn button2">编程语言</div>
+						</div>
+						<div class="m-content">
+							<div class="design">
+
+							</div>
+                        	<div class="language" style="display:none;">
+                        	</div>
+                        </div>
+                        <div class="page">
+							<a class="prve"><</a>
+                        	<a>1</a>
+                        	<a class="active">2</a>
+                        	<a>3</a>
+                        	<a>4</a>
+                        	<a>5</a>
+                        	<a>6</a>
+                        	<a>7</a>
+                        	<a>8</a>
+                        	<a class="next">></a>
+						</div>
+					</div>
+					<div class="m-right">
+						<div class="m-video">
+							<h4>机构介绍</h4>
+							<p class="m-title">观看下面的视频了解吧</p>
+							<div class="trigger">
+								<img class="im1" src="images/video.jpg">
+                        		<img class="im2" id="im2" src="images/play.png" />
+                    		</div>
+                    	</div>
+                    	<div class="popupvideo" style=" display:none;">
+                    			<div class="bgd"></div>
+                        		<div class="popup">
+                        			<div class="close" id="close"></div>
+                            		<p>请观看下面的视频</p>
+                            		<video controls poster="images/videoBG.jpg" src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" width="889" height="538" /></video>
+                        		</div>
+                    	</div>
+                    	<h3>最热排行</h3>
+                    	<div class="m-list">
+                    		<div class="m-wrap2">
+                        		
+                    		</div>
+                    	</div>
+					</div>
+				</div>
+			</div>
+			<div class="g-ft">
+				<div class="m-ft">
+					<div class="left">
+						<div class="logo">网易教育产品部</div>
+                		<p>©2014 icourse163.org 浙ICP备08114786号-1<br/> icourses.cn 京ICP备12020869</p>
+					</div>
+					<div class="middle-1">
+						<p>友情链接：</p>
+                		<a href=" " target="_blank">网易公开课</a>
+                		<a href=" " target="_blank">网易云课堂</a>
+                		<a href=" " target="_blank">中国大学MOOC</a>
+					</div>
+					<div class="middle-2">
+						<p>我们：</p>
+                		<a href=" " target="_blank">关于</a>
+                		<a href=" " target="_blank">联系</a>
+                		<a class="weibo" href=" " target="_blank">关注</a>
+					</div>
+					<div class="right">
+						<p>更多：</p>
+                		<a href=" " target="_blank">常见问题</a>
+                		<a href=" " target="_blank">意见反馈</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="m-modal" id="login" style="display:none;">
+      		<div class="modal_align"></div>
+      		<div class="modal_wrap">
+        		<div class="bk"></div>
+        		<div class="modal_body">
+          			<h3>登录网易云课堂</h3>
+          			<div class="form1">
+            			<input id="username" value="账号">
+          			</div>
+          			<div class="form2">
+            			<input id="password" value="密码">
+          			</div>
+          			<button id="submit">登录</button>
+        		</div>
+      		</div>
+    	</div>
+		<script src='modal.js'></script>
+	</body>
+</html>
